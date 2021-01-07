@@ -24,10 +24,27 @@ npm run watch-build
 npm run dev
 ```
 
-## Production
+## Deployments
 
-To get an production build just build the whole build with docker:
+To build and publish an new version of the image use `./docker-release`.
+
+The application is deployed to kubernetes using [kustomize](https://kustomize.io/). One needs to install the stand-alone version of kustomize, since the bundled one is long out of date([#1500](https://github.com/kubernetes-sigs/kustomize/issues/1500)). The manifests for each of the deployments are defined in [./k8s](./k8s):
 
 ```
-docker build -t text-editor-server .
+./k8s
+├── prod # the production deployment
+├── global # manifests that do not have to do with a specific deployment
+└── server-base # shared manifest definitions for each of the deployments
 ```
+
+To update the image tag either:
+
+1. edit `newTag` of one of the [kustomization.yaml](./k8s/prod/kustomization.yaml) files in the respective deployment directories or
+2. run `kustomize edit set image text-editor/server=rauno56/text-editor-server:[new tag name]` in the respective deployment directory.
+
+Build and apply a "kustomization" by running:
+
+```
+kustomize build [path-to-dir-with-kustomization.yaml] | kubectl apply -f -
+```
+

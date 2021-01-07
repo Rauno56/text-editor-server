@@ -10,10 +10,10 @@ I started with this document before writing any code for broad plan for executio
     + [x] Hello World
 - [x] Local development iteration - Local development and running the app should be trivial and working out of the box. Nothing frustrates me more than to come to a undocumented project that requires some secret knowledge to contribute to.
 - [x] Development iteration in docker - We cannot control the developers environment so let's give the environment with our application. It will be set in the prod anyways, so let's make sure one that's as similar as possible is used on every step of the way.
-- [ ] Kubernetes manifests
+- [x] Kubernetes manifests
     - [ ] ? Terraform setup
 - [ ] ? Deployment over CI on master builds
-- [ ] Cloudflare
+- [x] Cloudflare DNS setup
     - [ ] ? Full (strict) e2e encryption - I think it's super important not to leak user data. HTTPS is bare minimum for any traffic on the internet.
     - [ ] ? ingress setup to avoid http / IP access - generally I'd never leave IP open to the internet. CF hides the IP from the user and proxies the request, so at least it's not trivial to know which IP to access.
 

@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: text-editor
+nameSuffix: -prod
+commonLabels:
+  environment: prod
+secretGenerator:
+- envs:
+  - ./env
+  name: server-env
+  type: Opaque
+resources:
+- ../server-base
+images:
+- name: text-editor/server
+  newName: rauno56/text-editor-server
+  newTag: 270c95b

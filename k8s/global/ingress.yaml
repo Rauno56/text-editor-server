@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: text-editor
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: text-editor-external
+spec:
+  # default backend
+  # backend:
+  #   serviceName: text-editor-prod
+  #   servicePort: http
+  rules:
+  - host: prod.text-editor.viskus.io
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: text-editor-prod
+          servicePort: http
