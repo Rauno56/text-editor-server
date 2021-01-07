@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  builder:
+    build:
+      context: .
+      target: build
+    volumes:
+      - ./dist:/app/dist
+      - ./src:/app/src
+    command: npm run watch-build
+  app:
+    depends_on:
+      - builder
+    build:
+      context: .
+      target: build
+    volumes:
+      - ./dist:/app/dist
+    command: npm run dev
+    ports:
+      - '3000:80'

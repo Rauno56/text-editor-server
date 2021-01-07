@@ -8,6 +8,7 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@rollup/plugin-typescript": "^8.1.0",
+    "nodemon": "^2.0.7",
     "rimraf": "^3.0.2",
     "rollup": "^2.36.1",
     "tslib": "^2.1.0",
@@ -17,6 +18,8 @@
     "clean-build": "rimraf ./dist && rollup -c",
     "build": "rollup -c",
     "watch-build": "rollup -cw",
+    "start": "node .",
+    "dev": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rauno Viskus",

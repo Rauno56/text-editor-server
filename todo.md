@@ -8,8 +8,8 @@ I started with this document before writing any code for broad plan for executio
     + [x] Rollup builds + watch
     + [ ] Test setup with mocha
     + [x] Hello World
-- [ ] Local development iteration - Local development and running the app should be trivial and working out of the box. Nothing frustrates me more than to come to a undocumented project that requires some secret knowledge to contribute to.
-- [ ] Development iteration in docker - We cannot control the developers environment so let's give the environment with our application. It will be set in the prod anyways, so let's make sure one that's as similar as possible is used on every step of the way.
+- [x] Local development iteration - Local development and running the app should be trivial and working out of the box. Nothing frustrates me more than to come to a undocumented project that requires some secret knowledge to contribute to.
+- [x] Development iteration in docker - We cannot control the developers environment so let's give the environment with our application. It will be set in the prod anyways, so let's make sure one that's as similar as possible is used on every step of the way.
 - [ ] Kubernetes manifests
     - [ ] ? Terraform setup
 - [ ] ? Deployment over CI on master builds
