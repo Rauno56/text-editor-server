@@ -21,6 +21,7 @@ I'll start off by setting up some general scaffolding so we'd have something run
 
 ## The App
 
+- [x] Express scaffolding + health endpoint
 - [ ] Endpoints for in-memory data:
     + [ ] Fetching documents;
     + [ ] Posting changes [*](#footnote-a);
