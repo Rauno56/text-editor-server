@@ -10,7 +10,7 @@ spec:
   #   serviceName: text-editor-prod
   #   servicePort: http
   rules:
-  - host: prod.text-editor.viskus.io
+  - host: text-editor.viskus.io
     http:
       paths:
       - path: /*
