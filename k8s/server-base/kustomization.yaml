@@ -5,5 +5,5 @@ commonLabels:
   project: text-editor-server
 resources:
 - ./deployment.yaml
-- ./service.yaml
 - ./lb.service.yaml
+#- ./service.yaml # Remove since GKE Ingress is buggy

@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: text-editor
 resources:
 - ./namespace.yaml
-- ./ingress.yaml
+#- ./ingress.yaml # Remove since GKE Ingress is buggy
