@@ -4,3 +4,5 @@
 
 - [x] Fix Error inheritance
 - [x] Fix Ingress: Turns out CF Certs only allow one-level deep sub-domains and I was trying to use `prod.text-editor.viskus.io` + the ingress was buggy and wasted another 30 mins. Fell back to just using LB service type and dynamic IP for now.
+
+**2021.01.08 13:16** An hour later I'm moving on to the business logic. Really have to be aware of the scope now to ship something useful. I'll start with mocking the most necessary parts for the FE team to start prototyping against a real API.
