@@ -29,7 +29,7 @@ export const getDocument = async (docId) => {
 	assertValidId(docId);
 
 	if (db.has(docId)) {
-		return db.get(docId) || Promise.reject();
+		return db.get(docId);
 	}
 
 	return Promise.reject(new NotFound('Document not found', { docId }));
