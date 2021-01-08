@@ -4,6 +4,9 @@ import httpLogger from 'pino-http';
 const logger = httpLogger();
 export const loggerMiddleware = (req, res, next) => {
 	logger(req, res);
+	if (req.url === '/health') {
+		req.log.level = 'silent';
+	}
 	next();
 };
 
