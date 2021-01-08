@@ -13,9 +13,10 @@ export class AppError extends Error {
 }
 
 export class NotFound extends AppError {
-	constructor() {
-		super('Not found');
+	constructor(message, context) {
+		super(message || 'Not found');
 		this.code = 404;
+		this.context = context;
 	}
 }
 
@@ -23,6 +24,14 @@ export class EndpointNotFound extends AppError {
 	constructor() {
 		super('Endpoint not found');
 		this.code = 404;
+	}
+}
+
+export class BadRequest extends AppError {
+	constructor(message, context) {
+		super(message || 'Bad request');
+		this.code = 400;
+		this.context = context;
 	}
 }
 
