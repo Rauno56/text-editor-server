@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "suppressExcessPropertyErrors": false,
+    "strictFunctionTypes": true,
     "declaration": true,
     "declarationDir": "dist",
     "module": "esnext",
