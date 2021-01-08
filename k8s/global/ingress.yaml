@@ -15,5 +15,5 @@ spec:
       paths:
       - path: /*
         backend:
-          serviceName: text-editor-prod
+          serviceName: server-prod
           servicePort: http
