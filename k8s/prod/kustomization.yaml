@@ -14,4 +14,4 @@ resources:
 images:
 - name: text-editor/server
   newName: rauno56/text-editor-server
-  newTag: 1b09e5e
+  newTag: 18e1b18
